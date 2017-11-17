@@ -1,11 +1,10 @@
 
 class App
   def call(env)
-    [
-      200,
-      { 'Content-Type' => 'text/html' },
-      ['Hello, world!']
-    ]
+    response = Rack::Response.new
+    response['Content-Type'] = 'text/html'
+    response.write('Hello, world!')
+    response.finish
   end
 end
 
