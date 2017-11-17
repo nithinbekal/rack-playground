@@ -1,10 +1,4 @@
 
-app = lambda do |env|
-  [
-    200,
-    { 'Content-Type' => 'text/html' },
-    ['Hello, world!']
-  ]
-end
+require_relative 'lib/app'
 
-run app
+run App.new
