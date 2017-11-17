@@ -1,7 +1,7 @@
 
 class App
   def call(env)
-    request = Rack::Request.new
+    request = Rack::Request.new(env)
     response = Rack::Response.new
 
     if request.path == '/ping'
